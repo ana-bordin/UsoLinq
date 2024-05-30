@@ -10,7 +10,7 @@ namespace projetoAula_B
             StreamReader reader = new StreamReader(path);
             string jsonString = reader.ReadToEnd();
             
-            var objGeral = JsonConvert.DeserializeObject<MotoristaHabilitado>(jsonString, new IsoDateTimeConverter { DateTimeFormat = "dd/MM/yyyy"});
+            var objGeral = JsonConvert.DeserializeObject<MotoristaHabilitado>(jsonString, new IsoDateTimeConverter {DateTimeFormat = "dd/MM/yyyy"});
 
             if (objGeral != null) return objGeral.PenalidadesAplicadas;
             return null;

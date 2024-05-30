@@ -8,11 +8,18 @@ namespace projetoAula_B
 {
     public class DbContext
     {
-        string ConexaoBD = "Data Source=127.0.0.1; Initial Catalog=Campeonato; User Id=sa; Password=SqlServer2019!; TrustServerCertificate=True";
+        string ConexaoBDSQL = "Data Source=127.0.0.1; Initial Catalog=MotoristaHabilitado; User Id=sa; Password=SqlServer2019!; TrustServerCertificate=True";
+       
+        string ConexaoBDMongo = "mongodb://root:Mongo%402024%23@localhost:27017";
 
-        public string GetConnect()
+        
+        public string GetConnectSQL()
         {
-            return ConexaoBD;
+            return ConexaoBDSQL;
+        }
+        public string GetConnectMongo()
+        {
+            return ConexaoBDMongo;
         }
     }
 }
